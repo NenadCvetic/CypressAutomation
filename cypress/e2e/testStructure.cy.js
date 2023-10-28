@@ -29,9 +29,34 @@ describe('Context: My first Tests', () => {
 
         cy.get('.nav-link').click();
 
-       
+    })
+
+    it('Test 2', () => {
+
+        expect(false).to.equal(false);
 
     })
+
+    it('Test 3' , () => {
+
+        expect(false).not.to.equal(true);
+
+    })
+
+    it('Test 4' , () => {
+
+        expect(5).not.to.equal(4);
+
+    })
+
+    it('Test 4' , () => {
+
+        expect(true).to.equal('5' == 5);
+
+    })
+
+
+
 
 
 
