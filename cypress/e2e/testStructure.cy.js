@@ -31,7 +31,7 @@ describe('Context: My first Tests', () => {
 
     })
 
-    it('Test 2', () => {
+    xit('Test 2', () => {
 
         expect(false).to.equal(false);
 
@@ -43,7 +43,7 @@ describe('Context: My first Tests', () => {
 
     })
 
-    it('Test 4' , () => {
+    it.skip('Test 4' , () => {
 
         expect(5).not.to.equal(4);
 
