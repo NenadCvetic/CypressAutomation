@@ -11,7 +11,9 @@ describe('Locators practice', () => {
     })
 
 
-    it('Check different locators strategies', () => {
+
+
+    xit('Check different locators strategies', () => {
 
         //by CSS locator
         cy.get("input[name='username']").type('CydeoStudent'); //every statement creates an object with which you can interact with
@@ -40,26 +42,40 @@ describe('Locators practice', () => {
             cy.get("#wooden_spoon");
 
             //using text to locate
+
             cy.get("button").should('contain', 'Login').click();
+
         })
 
 
-        it('Test 4', () => {
+    })
 
-            expect(true).to.equal('5' == 5);
-    
-        })
-    
+    xit('Check finding elemnts by traveling through DOM - Document object model', () => {
+
+        cy.get("input[name='username']").parents('form').find('button').should('contain', 'Login').click();
+
 
     })
 
 
+    it.only('Check different types of assertions', () => {
 
+        //Cypress itself uses assertions provided by Chai, Sinon and jQuery library libraries
+        //Should Assertions -> directly asserting on the element we located
+        cy.get('#wooden_spoon').should('contain' , 'Login').and('have.class', 'btn btn-primary');
 
+        //expect assertion: creates a subject of our test, then we implement different actions
+        cy.get('#wooden_spoon').then((buttonElement) => {
 
+            expect(buttonElement).to.have.text('Login');
 
+            expect(buttonElement).to.have.class('btn btn-primary');
 
+        })
 
+    
+
+    })
 
 })
 
