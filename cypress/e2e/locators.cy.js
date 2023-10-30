@@ -26,7 +26,7 @@ it(('Check different locators strategies'), () => {
 
         expect(item).to.have.attr("type");
 
-    
+        expect(item).to.have.attr("name");
 
         
 
