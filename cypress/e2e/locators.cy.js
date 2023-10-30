@@ -11,7 +11,7 @@ describe('Locators practice', () => {
     })
 
 
-    it(('Check different locators strategies'), () => {
+    it('Check different locators strategies', () => {
 
         //by CSS locator
         cy.get("input[name='username']").type('CydeoStudent'); //every statement creates an object with which you can interact with
@@ -28,6 +28,7 @@ describe('Locators practice', () => {
 
             expect(item).to.have.attr("type");
 
+
             expect(item).to.have.attr("name");
             //by attriubute name
             cy.get("[type]");
@@ -40,10 +41,15 @@ describe('Locators practice', () => {
 
             //using text to locate
             cy.get("button").should('contain', 'Login').click();
-
-
         })
 
+
+        it('Test 4', () => {
+
+            expect(true).to.equal('5' == 5);
+    
+        })
+    
 
     })
 
