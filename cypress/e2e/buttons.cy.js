@@ -57,6 +57,7 @@ describe('Locators practice', () => {
 
         })
 
+        //npx cypress run headless -b chrome
 
     })
 
